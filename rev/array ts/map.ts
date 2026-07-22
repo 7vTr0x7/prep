@@ -1,10 +1,3 @@
-type TObject = ({
-    v: number | string | TObject
-}
-)
-
-type arrayType = number[] | string[] | TObject[]
-const array: arrayType = [1, 2, 3, 4, 5]
 
 interface Array<T> {
     newMap<U>(
