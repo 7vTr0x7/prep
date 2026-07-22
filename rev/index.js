@@ -1,26 +1,17 @@
-const arr = [1, [2, [3, [4, [5, [6, [7, [8, 9], 6], 6], 8], 9], 0, 7]]];
+const arr = [1, 2, 3, 4, 5];
 
-Array.prototype.newFlat = function (depth) {
+Array.prototype.newMap = function (cb) {
   if (!Array.isArray(this)) {
     throw new Error("Invalid array");
   }
 
-  if (depth <= 1) {
-    return this;
-  }
-
   let result = [];
 
-  for (let v of this) {
-    if (Array.isArray(v)) {
-      result.push(...v.newFlat(depth - 1));
-    } else {
-      result.push(v);
-    }
+  for (let i = 0; i < this.length; i++) {
+    result.push(cb(this[i], i, this));
   }
 
   return result;
 };
 
-const depth = arr.newFlat(8);
-console.log(depth);
+console.log(arr.newMap((a) => a + 2));
