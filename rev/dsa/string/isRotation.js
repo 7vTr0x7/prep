@@ -4,6 +4,6 @@ const isRotation = (str1, str2) => {
   return (str1 + str1).includes(str2);
 };
 
-console.log(isRotation("abcde", "cdeab")); // true
+`console.log(isRotation("abcde", "cdeab")); // true
 console.log(isRotation("abcde", "deabc")); // true
-console.log(isRotation("abcde", "abced")); // false
+console.log(isRotation("abcde", "abced")); // false`
