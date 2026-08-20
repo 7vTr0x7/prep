@@ -3,8 +3,8 @@ const PromisePolyfill = function (executor) {
     onReject,
     value,
     isFulfilled = false,
-    isRejected = false;
-  isCalled = false;
+    isRejected = false,
+    isCalled = false;
 
   const resolve = (val) => {
     isFulfilled = true;
