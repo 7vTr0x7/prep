@@ -81,7 +81,9 @@ const PromisePolyfill = function (executor) {
 };
 
 const promise = new PromisePolyfill((resolve, reject) => {
-  resolve(10);
+  setTimeout(() => {
+    resolve(10);
+  }, 1000);
 });
 
 promise
