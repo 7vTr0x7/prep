@@ -42,7 +42,11 @@ function PromisePollyFill(executor) {
     return this;
   };
 
-  executor(resolve, reject);
+  try {
+    executor(resolve, reject);
+  } catch (error) {
+    reject(error);
+  }
 }
 
 const ex = new PromisePollyFill((res, rej) => {
