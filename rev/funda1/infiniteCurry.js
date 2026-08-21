@@ -11,3 +11,4 @@ const add = (a) => {
 
 console.log(add(1)(2)(3)(4) + 0); // 10
 console.log(add(5)(10)(15) + 0); // 30
+console.log(add(5)(10)(15) + 0); // 30
